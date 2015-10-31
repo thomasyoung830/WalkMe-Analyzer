@@ -1,0 +1,18 @@
+body {
+    background:#019ad2;
+    color: white;
+    font-family: "helvetica neue",arial,sans-serif;
+    font-size:14px;
+    padding:3px;
+}
+
+a {
+    color:#cc0000;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#000;
+    text-decoration:underline;
+}
+

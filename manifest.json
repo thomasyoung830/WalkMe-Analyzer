@@ -1,0 +1,25 @@
+{
+		"manifest_version": 2,
+		"name": "WalkMe_Analyzer",
+		"version": "0.1.0",
+		"description": "A Chrome Extension that tells us if a website contains the WalkMe code",
+		"author": "Thomas Young",
+		"browser_action": {
+			"default_title": "Check to see if website contains WalkMe code",
+			"default_popup": "popup/popup.html",
+			// "default_popup": "walkmeanalyzer.html",
+			"default_icon": "walkme.png"
+		},
+		"background": {
+			"scripts": ["background.js", "jquery-2.1.4.min.js"],
+			"persistent": false
+		},
+		"permissions": ["tabs", "http://*/*", "https://s3.amazonaws.com/s3.maketutorial.com/"],
+		"content_scripts": [
+			{
+			"matches": ["*://*/*"],
+			"js": ["content.js", "jquery-2.1.4.min.js"],
+			"css": ["walkmeanalyzer.css"]
+			}
+		]
+}
